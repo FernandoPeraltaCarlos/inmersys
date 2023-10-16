@@ -11,9 +11,38 @@
 .todo {
     width: 80%;
     max-width: 1000px;
-    min-width: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    row-gap: 4em;
+    h2 {
+        color: #94adcf;
+        font-family: Ubuntu;
+        font-size: clamp(1rem, 100vw, 1.75rem);
+        @media (width < 800px) {
+            font-size: 1rem;
+        }
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        align-self: flex-start;
+    }
+}
+
+.todoSection {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2em;
+    & > p {
+        color: #94adcf;
+        font-size: 1rem;
+        @media (width < 800px) {
+            font-size: 0.8rem;
+        }
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
 }
