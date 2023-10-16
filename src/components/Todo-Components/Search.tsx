@@ -53,15 +53,29 @@ function Search ({event}) {
     const [input, setInput] = useState('');
     const inputRef = useRef(null);
 
+/**
+ * The function "inputText" is used to update the value of an input field in a React component.
+ * @param e - The parameter "e" is an event object that represents the event that triggered the function. In this case, it is
+ * likely an event object related to a user input event, such as typing into an input field.
+ */
     function inputText (e) {
         setInput(e.target.value);
     }
 
+/**
+ * The addTask function takes an input event and clears the value of the inputRef.
+ */
     function addTask (){
         event(input);
         inputRef.current.value = '';
     }
 
+/**
+ * The function "addTaskKeyboard" is triggered when the Enter key is pressed and it calls the "event" function with the "input"
+ * parameter, and then clears the value of the "inputRef" reference.
+ * @param e - The parameter "e" is an event object that represents the keyboard event. It contains information about the event,
+ * such as the key that was pressed.
+ */
     function addTaskKeyboard (e){
         if(e.key === 'Enter'){
             event(input);

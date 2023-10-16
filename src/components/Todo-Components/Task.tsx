@@ -59,6 +59,9 @@ p{
 
 function Task ({name, status, task , event}){
 
+/**
+ * The function `toogleTask` is used to toggle a task and it takes an event and a task as parameters.
+ */
     function toogleTask (){
         event(task)
     }
